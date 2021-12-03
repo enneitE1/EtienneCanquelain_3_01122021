@@ -1,4 +1,6 @@
 // Header
+body{
+	margin: 0;
 
 header{
 	@include flex_column;
@@ -71,4 +73,5 @@ header{
 	.icone_retour a{
 		color: $color-black;
 		}
+}
 }
