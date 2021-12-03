@@ -1,0 +1,21 @@
+/**Mixins **/
+
+//Flexbox mixins//
+
+@mixin flex_items{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex_space{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+@mixin flex_column{
+	display: flex;
+	flex-direction: column;
+}
+
+
+//Mixins couleurs //

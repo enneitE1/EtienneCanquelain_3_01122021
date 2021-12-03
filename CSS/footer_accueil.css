@@ -1,0 +1,30 @@
+  /**Responsive MOBILE **/
+
+footer{
+	background: #353535;
+	color: white;
+}
+.h2_footer{
+	font-family: 'Shrikhand', sans-serif;
+	padding: 20px 0px 0px 40px;
+	text-shadow: 5px 5px 5px black;
+	margin-top: 0px;
+}
+#nav_footer{
+	display:flex;
+	flex-direction: column;
+
+}
+nav li{
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+nav a{
+	text-decoration: none;
+	color: white;
+}
+.icone_footer{
+	padding-right: 10px;
+	height: 15px;
+	width: 15px;
+}

@@ -1,0 +1,29 @@
+/**Responsive MOBILE **/
+#section_fonctionnement {
+	& h2{
+		margin-left: 20px;
+	}
+	#choix{
+		@include flex_space;
+		background-color: $bg-gris;
+		border-radius: 25px;
+		width: 90%;
+		height: 80px;
+		margin: auto auto 20px auto;	
+	& p{
+		@include flex_items;
+		background: $color-primary;
+		color: $color-white;
+		width: 20px;
+		height: 20px;
+		border-radius: 25px;	
+		margin-left: 20px;
+	}
+	& h3{
+		margin-right: 40px;
+	}
+	}
+	.icone_choix{
+		color: gray;
+	}
+}

@@ -1,0 +1,63 @@
+/**Responsive MOBILE **/
+#restaurants{
+	background: $bg-gris;
+	height: 1140px;
+	& h2{
+		padding:  45px 0 10px 25px;
+	}
+#vignette{
+	width: 90%;
+	height: 232px;
+	background: $color-white;
+	border-radius: 30px;
+	box-shadow: 0px 5px 20px #999;
+	margin: auto auto 20px auto;
+	& a{
+		text-decoration: none;
+	}
+}
+#txt_icone_vignette{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	& h3{
+		margin: 10px 0px 0px 15px;
+	}
+	& p{
+		margin: 5px 0px 0px 15px;
+	}
+	& a{
+		color: $color-black;
+	}
+}
+#div_img_vignette{
+	height: 160px;
+	position: relative;	
+}
+.img_vignette{
+	border-radius: 20px 20px 0px 0px;
+	height: 160px;
+	width: 100%;
+	object-fit: cover;	
+ }
+ .texte_nouveau{
+	 background: $color-tertiary;
+	 color: green;
+	 position: absolute;
+	 right: 10px;
+	 top: 10px;
+	 font-weight: bold;
+	 width: 70px;
+	 height: 25px;
+	 padding: 3px 0 0 8px;
+ }
+ .div_icone{
+	 display: flex;
+	 align-items: center;
+	 margin-right: 40px;
+	 font-size: 1.35em;
+ }
+ .icone_coeur{
+	 display: flex;
+ }
+}

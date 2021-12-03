@@ -1,0 +1,74 @@
+// Header
+
+header{
+	@include flex_column;
+	width: 100%;
+	
+	#logo{
+		display: flex;
+		height: 60px;
+	}
+	.img_logo{
+		width: 50%;
+		margin: auto;
+	}
+	#localisation{
+		@include flex_items;
+		height: 60px;
+		box-shadow: 0px 5px 20px #999;
+		background: $color-bg;
+	}
+	.icone_loc{
+		color: $color-black;
+		padding-right: 10px;
+	}
+	#bloc_explorer{
+		@include flex_items;
+		@include flex_column;
+		background: #F3F3F3;
+		height: 300px;
+	}
+	#titre_accueil{
+		text-align: center;
+		width: 70%;
+		margin-bottom: 20px;
+		 h1{
+			font-family: $font-roboto;
+			font-size: 1.6em;
+		}
+		 p{
+			font-family: $font-roboto;
+			font-size: 0.9em;
+		}		
+	}
+	.bouton_explorer{
+		background: $bg-degrade;
+		color: $color-white;
+		height: 50px;
+		border-radius: 25px;
+		border: none;
+		width: 190px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	#recherche_loc{
+		color: $color-black;
+		background: $color-bg;
+		cursor: pointer;
+		outline: none;
+	}
+/**Responsive MOBILE des autres pages**/
+	.bg_menu{
+		width: 100%;
+		object-fit: cover;
+		max-height: 250px;
+		}
+	#block_header{
+		display: flex;
+		align-items: center;
+		margin-left: 25px;
+		}
+	.icone_retour a{
+		color: $color-black;
+		}
+}

@@ -1,0 +1,63 @@
+  /**Responsive MOBILE **/
+.titre_main{
+	display: flex;
+	align-items: baseline;
+	width: 100%;
+	justify-content: space-around;
+	font-family: 'Shrikhand' , sans-serif;
+  }
+  #section_main{
+	background-color: #F2F2F2;
+	border-radius: 25px 25px 0px 0px;
+	margin-top: -45px;
+	position: relative;
+  }
+  #section_main .icone_coeur{
+	  color: black;
+	  font-size: 1.25em;
+  }
+  #menu_entrees{
+	  display: flex;
+	  flex-direction: column;
+  }
+  #menu_entrees h2{
+	border-bottom: 2px #99E2D0 solid;
+	width: 15%;
+	text-transform: uppercase;
+	margin-left: 20px;
+  }
+  .menu{
+	  display: flex;
+	  background-color: white;
+	  border-radius: 25px;
+	  width: 90%;
+	  height: 85px;
+	  margin: auto auto 25px auto;	
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+  }
+  .prix{
+	  display: flex;
+	  align-items: end;
+	  padding-right: 15px;
+  }
+  .texte_menu{
+	padding-left: 15px;
+  }
+  .texte_menu h3{
+	  margin-bottom: 0px;
+  }
+  .bouton_commander{
+	height: 50px;
+	border-radius: 25px;
+	background: linear-gradient(#9356DC, #FF79DA);
+	border: none;
+	color: white;
+	width: 190px;
+	font-weight: bold;
+	cursor: pointer;
+	display: flex;
+	margin: auto auto 20px auto;
+	align-items: center;
+	justify-content: center;
+  }

@@ -1,0 +1,269 @@
+/**Mixins **/
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /**Responsive MOBILE des autres pages**/
+}
+header #logo {
+  display: flex;
+  height: 60px;
+}
+header .img_logo {
+  width: 50%;
+  margin: auto;
+}
+header #localisation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  box-shadow: 0px 5px 20px #999;
+  background: #eeeded;
+}
+header .icone_loc {
+  color: black;
+  padding-right: 10px;
+}
+header #bloc_explorer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: #F3F3F3;
+  height: 300px;
+}
+header #titre_accueil {
+  text-align: center;
+  width: 70%;
+  margin-bottom: 20px;
+}
+header #titre_accueil h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6em;
+}
+header #titre_accueil p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+}
+header .bouton_explorer {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  width: 190px;
+  font-weight: bold;
+  cursor: pointer;
+}
+header #recherche_loc {
+  color: black;
+  background: #eeeded;
+  cursor: pointer;
+  outline: none;
+}
+header .bg_menu {
+  width: 100%;
+  object-fit: cover;
+  max-height: 250px;
+}
+header #block_header {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+header .icone_retour a {
+  color: black;
+}
+
+/**Responsive MOBILE **/
+#section_fonctionnement h2 {
+  margin-left: 20px;
+}
+#section_fonctionnement #choix {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F2F2F2;
+  border-radius: 25px;
+  width: 90%;
+  height: 80px;
+  margin: auto auto 20px auto;
+}
+#section_fonctionnement #choix p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #9356DC;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  margin-left: 20px;
+}
+#section_fonctionnement #choix h3 {
+  margin-right: 40px;
+}
+#section_fonctionnement .icone_choix {
+  color: gray;
+}
+
+/**Responsive MOBILE **/
+#restaurants {
+  background: #F2F2F2;
+  height: 1140px;
+}
+#restaurants h2 {
+  padding: 45px 0 10px 25px;
+}
+#restaurants #vignette {
+  width: 90%;
+  height: 232px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0px 5px 20px #999;
+  margin: auto auto 20px auto;
+}
+#restaurants #vignette a {
+  text-decoration: none;
+}
+#restaurants #txt_icone_vignette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#restaurants #txt_icone_vignette h3 {
+  margin: 10px 0px 0px 15px;
+}
+#restaurants #txt_icone_vignette p {
+  margin: 5px 0px 0px 15px;
+}
+#restaurants #txt_icone_vignette a {
+  color: black;
+}
+#restaurants #div_img_vignette {
+  height: 160px;
+  position: relative;
+}
+#restaurants .img_vignette {
+  border-radius: 20px 20px 0px 0px;
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+}
+#restaurants .texte_nouveau {
+  background: #99E2D0;
+  color: green;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight: bold;
+  width: 70px;
+  height: 25px;
+  padding: 3px 0 0 8px;
+}
+#restaurants .div_icone {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  font-size: 1.35em;
+}
+#restaurants .icone_coeur {
+  display: flex;
+}
+
+/**Responsive MOBILE **/
+#section_main {
+  background: #F2F2F2;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+  margin-top: -45px;
+}
+#section_main .icone_coeur {
+  color: black;
+  font-size: 1.25em;
+}
+#section_main .titre_main {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  justify-content: space-around;
+  font-family: "Shrikhand", sans-serif;
+}
+#section_main #menu_entrees {
+  display: flex;
+  flex-direction: column;
+}
+#section_main #menu_entrees h2 {
+  border-bottom: 2px #99E2D0 solid;
+  width: 15%;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+#section_main .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: white;
+  border-radius: 25px;
+  width: 90%;
+  height: 85px;
+  margin: auto auto 25px auto;
+}
+#section_main .texte_menu {
+  padding-left: 15px;
+}
+#section_main .texte_menu h3 {
+  margin-bottom: 0px;
+}
+#section_main .prix {
+  display: flex;
+  align-items: end;
+  padding-right: 15px;
+}
+#section_main .bouton_commander {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  height: 50px;
+  width: 190px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: auto auto 20px auto;
+}
+
+/**Responsive MOBILE **/
+footer {
+  background: #353535;
+  color: white;
+}
+footer .h2_footer {
+  font-family: "Shrikhand", sans-serif;
+  padding: 20px 0 0 40px;
+  text-shadow: 5px 5px 5px black;
+  margin-top: 0px;
+}
+footer #nav_footer {
+  display: flex;
+  flex-direction: column;
+}
+footer nav li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+footer nav a {
+  text-decoration: none;
+  color: white;
+}
+footer .icone_footer {
+  padding-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+
+/*# sourceMappingURL=main.css.map */

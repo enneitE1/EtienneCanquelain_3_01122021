@@ -1,0 +1,30 @@
+/**Responsive MOBILE **/
+
+footer{
+	background: $bg-footer;
+	color: $color-white;
+	.h2_footer{
+		font-family: $font-shrikhand;
+		padding: 20px 0 0 40px;
+		text-shadow: 5px 5px 5px black;
+		margin-top: 0px;
+	}
+	#nav_footer{
+		@include flex_column;
+	}
+	nav{
+		 li{
+			list-style-type: none;
+			margin-bottom: 10px;
+		}
+		 a{
+			text-decoration: none;
+			color: $color-white;
+		}
+	}
+	.icone_footer{
+		padding-right: 10px;
+		height: 15px;
+		width: 15px;
+	}
+}
