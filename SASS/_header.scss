@@ -1,6 +1,4 @@
 // Header
-body{
-	margin: 0px;
 
 header{
 	@include flex_column;
@@ -60,18 +58,18 @@ header{
 		outline: none;
 	}
 /**Responsive MOBILE des autres pages**/
-	.bg_menu{
-		width: 100%;
-		object-fit: cover;
-		max-height: 250px;
-		}
 	#block_header{
 		display: flex;
 		align-items: center;
 		margin-left: 25px;
 		}
+}
+	.bg_menu{
+		width: 100%;
+		object-fit: cover;
+		max-height: 250px;
+		}
+
 	.icone_retour a{
 		color: $color-black;
 		}
-}
-}

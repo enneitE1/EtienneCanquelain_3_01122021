@@ -1,4 +1,8 @@
 /**Mixins **/
+body {
+  margin: 0;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -63,17 +67,19 @@ header #recherche_loc {
   cursor: pointer;
   outline: none;
 }
-header .bg_menu {
-  width: 100%;
-  object-fit: cover;
-  max-height: 250px;
-}
 header #block_header {
   display: flex;
   align-items: center;
   margin-left: 25px;
 }
-header .icone_retour a {
+
+.bg_menu {
+  width: 100%;
+  object-fit: cover;
+  max-height: 250px;
+}
+
+.icone_retour a {
   color: black;
 }
 
