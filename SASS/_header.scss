@@ -6,7 +6,7 @@ header{
 	
 	#logo{
 		display: flex;
-		height: 60px;
+		height: 80px;
 	}
 	.img_logo{
 		width: 50%;
@@ -20,7 +20,7 @@ header{
 	}
 	.icone_loc{
 		color: $color-black;
-		padding-right: 10px;
+		padding: 0 10px 0 70px;
 	}
 	#bloc_explorer{
 		@include flex_items;
@@ -55,7 +55,10 @@ header{
 		color: $color-black;
 		background: $color-bg;
 		cursor: pointer;
+		border: none;
 		outline: none;
+		font-size: 18px;
+		opacity: 0.5;
 	}
 /**Responsive MOBILE des autres pages**/
 	#block_header{

@@ -1,6 +1,6 @@
 /**Responsive MOBILE **/
 #section_fonctionnement {
-	& h2{
+	 h2{
 		margin-left: 20px;
 	}
 	#choix{
@@ -10,16 +10,16 @@
 		width: 90%;
 		height: 80px;
 		margin: auto auto 20px auto;	
-	& p{
+	 p{
 		@include flex_items;
 		background: $color-primary;
 		color: $color-white;
 		width: 20px;
 		height: 20px;
 		border-radius: 25px;	
-		margin-left: 20px;
+		margin-left: -20px;
 	}
-	& h3{
+	 h3{
 		margin-right: 40px;
 	}
 	}

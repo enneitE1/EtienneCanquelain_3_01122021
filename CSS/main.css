@@ -11,7 +11,7 @@ header {
 }
 header #logo {
   display: flex;
-  height: 60px;
+  height: 80px;
 }
 header .img_logo {
   width: 50%;
@@ -27,7 +27,7 @@ header #localisation {
 }
 header .icone_loc {
   color: black;
-  padding-right: 10px;
+  padding: 0 10px 0 70px;
 }
 header #bloc_explorer {
   display: flex;
@@ -65,7 +65,10 @@ header #recherche_loc {
   color: black;
   background: #eeeded;
   cursor: pointer;
+  border: none;
   outline: none;
+  font-size: 18px;
+  opacity: 0.5;
 }
 header #block_header {
   display: flex;
@@ -106,7 +109,7 @@ header #block_header {
   width: 20px;
   height: 20px;
   border-radius: 25px;
-  margin-left: 20px;
+  margin-left: -20px;
 }
 #section_fonctionnement #choix h3 {
   margin-right: 40px;
@@ -265,6 +268,7 @@ footer nav li {
 footer nav a {
   text-decoration: none;
   color: white;
+  font-size: 20px;
 }
 footer .icone_footer {
   padding-right: 10px;
