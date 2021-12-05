@@ -2,6 +2,14 @@
 body {
   margin: 0;
 }
+body h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+body .bg_menu {
+  width: 100%;
+  object-fit: cover;
+  max-height: 250px;
+}
 
 header {
   display: flex;
@@ -9,13 +17,10 @@ header {
   width: 100%;
   /**Responsive MOBILE des autres pages**/
 }
-header #logo {
+header h1 {
   display: flex;
-  height: 80px;
-}
-header .img_logo {
-  width: 50%;
-  margin: auto;
+  height: 40px;
+  justify-content: center;
 }
 header #localisation {
   display: flex;
@@ -24,6 +29,9 @@ header #localisation {
   height: 60px;
   box-shadow: 0px 5px 20px #999;
   background: #eeeded;
+}
+header #localisation a {
+  opacity: 0.5;
 }
 header .icone_loc {
   color: black;
@@ -43,7 +51,7 @@ header #titre_accueil {
   width: 70%;
   margin-bottom: 20px;
 }
-header #titre_accueil h1 {
+header #titre_accueil h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.6em;
 }
@@ -73,16 +81,14 @@ header #recherche_loc {
 header #block_header {
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  justify-content: center;
 }
-
-.bg_menu {
-  width: 100%;
-  object-fit: cover;
-  max-height: 250px;
+header .icone_retour {
+  position: absolute;
+  top: 36px;
+  left: 30px;
 }
-
-.icone_retour a {
+header .icone_retour a {
   color: black;
 }
 
@@ -99,6 +105,7 @@ header #block_header {
   width: 90%;
   height: 80px;
   margin: auto auto 20px auto;
+  box-shadow: 0px 5px 20px #999;
 }
 #section_fonctionnement #choix p {
   display: flex;
@@ -113,15 +120,31 @@ header #block_header {
 }
 #section_fonctionnement #choix h3 {
   margin-right: 40px;
+  opacity: 0.6;
 }
-#section_fonctionnement .icone_choix {
+#section_fonctionnement #choix .icone_choix {
   color: gray;
+}
+@media all and (min-width: 768px) and (max-width: 992px) {
+  #section_fonctionnement #choix {
+    justify-content: flex-start;
+  }
+  #section_fonctionnement #choix p {
+    margin: 0 20px 0 -7px;
+  }
+  #section_fonctionnement #choix .icone_choix {
+    margin-right: 20px;
+  }
 }
 
 /**Responsive MOBILE **/
+.titre_restaurants {
+  margin-left: 20px;
+}
+
 #restaurants {
   background: #F2F2F2;
-  height: 1140px;
+  height: 1040px;
 }
 #restaurants h2 {
   padding: 45px 0 10px 25px;
@@ -182,6 +205,16 @@ header #block_header {
   display: flex;
 }
 
+@media all and (min-width: 768px) and (max-width: 992px) {
+  #restaurants {
+    height: 570px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #restaurants #vignette {
+    width: 45%;
+  }
+}
 /**Responsive MOBILE **/
 #section_main {
   background: #F2F2F2;

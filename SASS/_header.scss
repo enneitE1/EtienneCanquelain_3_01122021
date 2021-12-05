@@ -3,20 +3,19 @@
 header{
 	@include flex_column;
 	width: 100%;
-	
-	#logo{
+	h1{
 		display: flex;
-		height: 80px;
-	}
-	.img_logo{
-		width: 50%;
-		margin: auto;
+		height: 40px;
+		justify-content: center;
 	}
 	#localisation{
 		@include flex_items;
 		height: 60px;
 		box-shadow: 0px 5px 20px #999;
 		background: $color-bg;
+		a{
+			opacity: 0.5;
+		}
 	}
 	.icone_loc{
 		color: $color-black;
@@ -32,7 +31,7 @@ header{
 		text-align: center;
 		width: 70%;
 		margin-bottom: 20px;
-		 h1{
+		 h2{
 			font-family: $font-roboto;
 			font-size: 1.6em;
 		}
@@ -64,15 +63,14 @@ header{
 	#block_header{
 		display: flex;
 		align-items: center;
-		margin-left: 25px;
+		justify-content: center;
 		}
+	.icone_retour{
+		position: absolute;
+		top: 36px;
+		left: 30px;	
+		a{
+			color: $color-black;
+		}	
+	}
 }
-	.bg_menu{
-		width: 100%;
-		object-fit: cover;
-		max-height: 250px;
-		}
-
-	.icone_retour a{
-		color: $color-black;
-		}
