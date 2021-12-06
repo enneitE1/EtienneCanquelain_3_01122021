@@ -1,13 +1,10 @@
 /**Responsive MOBILE **/
 
-.titre_restaurants{
-	margin-left: 20px;
-}
-
 #restaurants{
 	background: $bg-gris;
 	height: 1140px;
 	 h2{
+		margin-left: 20px;
 		padding:  45px 0 10px 25px;
 	}
 #vignette{
@@ -85,4 +82,23 @@
 	}
 	}
 }
+}
+// Responsive DESKTOP //
+@media all and (min-width: 992px){
+	#restaurants{ 
+		height: 620px;
+		display: flex;
+		flex-wrap: wrap; 
+		padding-bottom: 50px;
+		#bloc_vignettes{	
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+		
+		#vignette{
+			width: 45%;
+		}
+		}
+	}
+
 }

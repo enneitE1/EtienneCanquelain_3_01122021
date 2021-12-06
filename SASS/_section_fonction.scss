@@ -44,4 +44,31 @@
 	}
 }
 }
+// Responsive DESKTOP //
+@media all and (min-width: 992px){
+	#section_fonctionnement{
+		height: 170px;
+		h2{
+			margin-left: 50px;
+		}
+	}
+	#bloc_choix{
+		display: flex;
+		#choix{
+			width: 30%;
+			display: flex;
+			flex-direction: row;
+			justify-content:  flex-start;
+			p{
+				margin-left: -10px;
+			}
+			.icone_choix{
+				margin-left: 20px;
+			}
+			h3{
+				margin-left: 20px;
+			}
+		}
+	}
+}
 

@@ -3,16 +3,15 @@
 footer{
 	background: $bg-footer;
 	color: $color-white;
+	height: 230px;
 	.h2_footer{
 		font-family: $font-shrikhand;
 		padding: 20px 0 0 40px;
 		text-shadow: 5px 5px 5px black;
 		margin-top: 0px;
 	}
-	#nav_footer{
-		@include flex_column;
-	}
-	nav{
+	#ul_footer{
+		@include flex_column;	
 		 li{
 			list-style-type: none;
 			margin-bottom: 10px;
@@ -21,11 +20,46 @@ footer{
 			text-decoration: none;
 			color: $color-white;
 			font-size: 20px;
+		}	
+		.icone_footer{
+			padding-right: 10px;
+			height: 15px;
+			width: 15px;
 		}
 	}
-	.icone_footer{
-		padding-right: 10px;
-		height: 15px;
-		width: 15px;
+}
+// Responsive TABLETTE //
+
+@media all and (min-width: 768px) and (max-width: 992px){
+
+	footer{
+		height: 230px;
+		.h2_footer{
+			display: flex;
+			justify-content: center;
+			font-size: 3em;
+		}
+		#ul_footer{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+	}
+}
+
+// Responsive DESKTOP //
+@media all and (min-width: 992px){
+	footer{
+		height: 230px;
+		.h2_footer{
+			display: flex;
+			justify-content: center;
+			font-size: 3em;
+		}
+		#ul_footer{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
 	}
 }
