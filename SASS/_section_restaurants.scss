@@ -6,7 +6,7 @@
 
 #restaurants{
 	background: $bg-gris;
-	height: 1040px;
+	height: 1140px;
 	 h2{
 		padding:  45px 0 10px 25px;
 	}
@@ -70,13 +70,19 @@
 
 @media all and (min-width: 768px) and (max-width: 992px){
 
-#restaurants{
-	height: 570px;
+ #restaurants{ 
+	height: 620px;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: wrap; 
+	padding-bottom: 50px;
+	#bloc_vignettes{	
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
 	
 	#vignette{
 		width: 45%;
+	}
 	}
 }
 }

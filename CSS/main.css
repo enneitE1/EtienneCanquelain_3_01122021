@@ -144,7 +144,7 @@ header .icone_retour a {
 
 #restaurants {
   background: #F2F2F2;
-  height: 1040px;
+  height: 1140px;
 }
 #restaurants h2 {
   padding: 45px 0 10px 25px;
@@ -207,11 +207,17 @@ header .icone_retour a {
 
 @media all and (min-width: 768px) and (max-width: 992px) {
   #restaurants {
-    height: 570px;
+    height: 620px;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 50px;
   }
-  #restaurants #vignette {
+  #restaurants #bloc_vignettes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #restaurants #bloc_vignettes #vignette {
     width: 45%;
   }
 }
