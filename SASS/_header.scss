@@ -1,3 +1,4 @@
+// Reponsive MOBILE //
 // Header
 
 header{
@@ -5,7 +6,6 @@ header{
 	width: 100%;
 	h1{
 		display: flex;
-		height: 40px;
 		justify-content: center;
 	}
 	#localisation{
@@ -61,9 +61,7 @@ header{
 	}
 /**Responsive MOBILE des autres pages**/
 	#block_header{
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include flex_items;
 		}
 	.icone_retour{
 		position: absolute;
@@ -74,3 +72,31 @@ header{
 		}	
 	}
 }
+
+// Responsive DESKTOP page principale //
+@media all and (min-width: 992px){
+header{
+	h1{
+		font-size: 3em;
+	}
+	#bloc_explorer{
+		height: 300px;
+	}
+}
+}
+
+// Responsive DESKTOP des autres pages //
+@media all and (min-width: 992px){
+header{
+	#block_header{
+		h1{
+			font-size: 2em;
+		}
+		font-size: 2em;
+		margin: auto;
+			.icone_retour{
+				top: 74px;
+			}
+	}	
+} 
+} 

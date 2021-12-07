@@ -11,6 +11,11 @@ body .bg_menu {
   max-height: 250px;
 }
 
+@media all and (min-width: 992px) {
+  body .bg_menu {
+    max-height: 620px;
+  }
+}
 header {
   display: flex;
   flex-direction: column;
@@ -19,7 +24,6 @@ header {
 }
 header h1 {
   display: flex;
-  height: 40px;
   justify-content: center;
 }
 header #localisation {
@@ -92,6 +96,26 @@ header .icone_retour a {
   color: black;
 }
 
+@media all and (min-width: 992px) {
+  header h1 {
+    font-size: 3em;
+  }
+  header #bloc_explorer {
+    height: 300px;
+  }
+}
+@media all and (min-width: 992px) {
+  header #block_header {
+    font-size: 2em;
+    margin: auto;
+  }
+  header #block_header h1 {
+    font-size: 2em;
+  }
+  header #block_header .icone_retour {
+    top: 74px;
+  }
+}
 /**Responsive MOBILE **/
 #section_fonctionnement h2 {
   margin-left: 20px;
@@ -279,11 +303,11 @@ header .icone_retour a {
   justify-content: space-around;
   font-family: "Shrikhand", sans-serif;
 }
-#section_main #menu_entrees {
+#section_main #bloc_menu {
   display: flex;
   flex-direction: column;
 }
-#section_main #menu_entrees h2 {
+#section_main #bloc_menu h2 {
   border-bottom: 2px #99E2D0 solid;
   width: 15%;
   text-transform: uppercase;
@@ -325,6 +349,34 @@ header .icone_retour a {
   margin: auto auto 20px auto;
 }
 
+@media all and (min-width: 992px) {
+  #section_main {
+    width: 75%;
+    margin: -45px auto auto auto;
+    border-radius: 25px;
+    height: 660px;
+  }
+  #section_main .titre_main {
+    justify-content: space-between;
+    margin-left: 35px;
+  }
+  #section_main .icone_coeur {
+    margin-right: 60px;
+  }
+  #section_main #bloc_menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+  #section_main #bloc_menu #menu_entrees #menu_plats #menu_desserts {
+    display: flex;
+    flex-direction: column;
+  }
+  #section_main #bloc_menu .menu {
+    width: 100%;
+  }
+}
 /**Responsive MOBILE **/
 footer {
   background: #353535;

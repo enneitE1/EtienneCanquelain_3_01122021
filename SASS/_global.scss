@@ -1,3 +1,4 @@
+// Responsive MOBILE //
 body{
 	margin: 0;
 	h1{
@@ -8,4 +9,13 @@ body{
 		object-fit: cover;
 		max-height: 250px;
 		}
+}
+// Responsive DESKTOP //
+@media all and (min-width: 992px){
+body{
+
+	.bg_menu{
+		max-height: 620px;
+	}
+}
 }
