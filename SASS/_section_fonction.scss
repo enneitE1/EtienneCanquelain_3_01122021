@@ -29,11 +29,20 @@
 		color: gray;
 	}
 	}
-// Responsive TABLETTE //@at-root
+}
+// Responsive TABLETTE //
 
 @media all and (min-width: 768px) and (max-width: 992px){
+	#section_fonctionnement{
+		h2{
+			display: flex;
+			justify-content: center;
+			margin-left: 0;
+		}
+	
 	#choix{
 		justify-content: flex-start;
+		width: 50%;
 	p{
 		margin: 0 20px 0 -7px;
 	}
@@ -44,6 +53,7 @@
 	}
 }
 }
+
 // Responsive DESKTOP //
 @media all and (min-width: 992px){
 	#section_fonctionnement{

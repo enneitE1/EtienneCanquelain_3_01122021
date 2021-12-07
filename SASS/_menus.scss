@@ -19,7 +19,7 @@
 #bloc_menu{
 	@include flex_column;
 	 h2{
-		border-bottom: 2px #99E2D0 solid;
+		border-bottom: 3px #99E2D0 solid;
 		width: 15%;
 		text-transform: uppercase;
 		margin-left: 20px;
@@ -30,7 +30,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	background: $color-white;
-	border-radius: 25px;
+	border-radius: 15px;
 	width: 90%;
 	height: 85px;
 	margin:  auto auto 25px auto;
@@ -79,11 +79,12 @@
 			flex-direction: row;
 			width: 100%;
 			justify-content: space-around;
-			#menu_entrees
-			#menu_plats 
+			#menu_entrees,
+			#menu_plats,
 			#menu_desserts{
 				display: flex;
 				flex-direction: column;
+				width: 30%;
 			}
 			.menu{
 				width: 100%;

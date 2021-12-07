@@ -66,20 +66,24 @@
 // Responsive TABLETTE //
 
 @media all and (min-width: 768px) and (max-width: 992px){
-
- #restaurants{ 
+#restaurants{ 
 	height: 620px;
 	display: flex;
 	flex-wrap: wrap; 
 	padding-bottom: 50px;
+	h2{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-left: 0;
+	}
 	#bloc_vignettes{	
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
-	
-	#vignette{
-		width: 45%;
-	}
+		#vignette{
+			width: 45%;
+		}
 	}
 }
 }
@@ -93,8 +97,7 @@
 		#bloc_vignettes{	
 			display: flex;
 			flex-wrap: wrap;
-			width: 100%;
-		
+			width: 100%;	
 		#vignette{
 			width: 45%;
 		}

@@ -149,9 +149,16 @@ header .icone_retour a {
 #section_fonctionnement #choix .icone_choix {
   color: gray;
 }
+
 @media all and (min-width: 768px) and (max-width: 992px) {
+  #section_fonctionnement h2 {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
   #section_fonctionnement #choix {
     justify-content: flex-start;
+    width: 50%;
   }
   #section_fonctionnement #choix p {
     margin: 0 20px 0 -7px;
@@ -160,7 +167,6 @@ header .icone_retour a {
     margin-right: 20px;
   }
 }
-
 @media all and (min-width: 992px) {
   #section_fonctionnement {
     height: 170px;
@@ -260,6 +266,12 @@ header .icone_retour a {
     flex-wrap: wrap;
     padding-bottom: 50px;
   }
+  #restaurants h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
   #restaurants #bloc_vignettes {
     display: flex;
     flex-wrap: wrap;
@@ -308,7 +320,7 @@ header .icone_retour a {
   flex-direction: column;
 }
 #section_main #bloc_menu h2 {
-  border-bottom: 2px #99E2D0 solid;
+  border-bottom: 3px #99E2D0 solid;
   width: 15%;
   text-transform: uppercase;
   margin-left: 20px;
@@ -318,7 +330,7 @@ header .icone_retour a {
   flex-wrap: wrap;
   justify-content: space-between;
   background: white;
-  border-radius: 25px;
+  border-radius: 15px;
   width: 90%;
   height: 85px;
   margin: auto auto 25px auto;
@@ -369,9 +381,12 @@ header .icone_retour a {
     width: 100%;
     justify-content: space-around;
   }
-  #section_main #bloc_menu #menu_entrees #menu_plats #menu_desserts {
+  #section_main #bloc_menu #menu_entrees,
+#section_main #bloc_menu #menu_plats,
+#section_main #bloc_menu #menu_desserts {
     display: flex;
     flex-direction: column;
+    width: 30%;
   }
   #section_main #bloc_menu .menu {
     width: 100%;
