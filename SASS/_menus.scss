@@ -5,6 +5,7 @@
 	border-radius: 25px 25px 0 0;
 	position: relative;
 	margin-top: -45px;
+	padding-bottom: 20px;
 	 .icone_coeur{
 		color: $color-black;
 		font-size: 1.25em;
@@ -60,19 +61,29 @@
 }
 }
 
+// Responsive TABLETTE //
+@media all and (min-width: 768px) and (max-width: 992px){
+	#section_main{
+		#bloc_menu{
+			h2{
+				width: 7%;
+			}
+		}
+	}
+}
 // Responsive DESKTOP //
 @media all and (min-width: 992px){
 	#section_main{
 		width: 75%;
 		margin: -45px auto auto auto;
 		border-radius: 25px;
-		height: 660px;
 		.titre_main{
 			justify-content: space-between;
 			margin-left: 35px;
 		}
 		.icone_coeur{
 			margin-right: 60px;
+			font-size: 2em;
 		}
 		#bloc_menu{
 			display: flex;
@@ -82,8 +93,6 @@
 			#menu_entrees,
 			#menu_plats,
 			#menu_desserts{
-				display: flex;
-				flex-direction: column;
 				width: 30%;
 			}
 			.menu{

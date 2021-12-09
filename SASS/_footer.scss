@@ -20,7 +20,10 @@ footer{
 			text-decoration: none;
 			color: $color-white;
 			font-size: 20px;
-		}	
+		}
+		a:hover{
+			color: $color-secondary;
+		}
 		.icone_footer{
 			padding-right: 10px;
 			height: 15px;
@@ -43,6 +46,9 @@ footer{
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
+			a:hover{
+				color: $color-secondary;
+			}
 		}
 	}
 }
@@ -60,6 +66,9 @@ footer{
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
+			a:hover{
+				color: $color-secondary;
+			}
 		}
 	}
 }

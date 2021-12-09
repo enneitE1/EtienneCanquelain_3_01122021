@@ -94,12 +94,28 @@
 		display: flex;
 		flex-wrap: wrap; 
 		padding-bottom: 50px;
+		h2{
+			margin-left: 70px;
+		}
 		#bloc_vignettes{	
 			display: flex;
 			flex-wrap: wrap;
 			width: 100%;	
 		#vignette{
-			width: 45%;
+			width: 40%;
+			border-radius: 10px;
+			.img_vignette{
+				border-radius: 10px 10px 0 0;
+			}
+			.div_icone{
+				.icone_coeur{
+					font-size: 1.5em;
+				}
+				i:hover{
+					color: $color-secondary;
+					
+				}
+			}
 		}
 		}
 	}

@@ -100,6 +100,12 @@ header .icone_retour a {
   header h1 {
     font-size: 3em;
   }
+  header #localisation {
+    font-size: 1.3em;
+  }
+  header #recherche_loc {
+    font-size: 0.9em;
+  }
   header #bloc_explorer {
     height: 300px;
   }
@@ -288,13 +294,26 @@ header .icone_retour a {
     flex-wrap: wrap;
     padding-bottom: 50px;
   }
+  #restaurants h2 {
+    margin-left: 70px;
+  }
   #restaurants #bloc_vignettes {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   }
   #restaurants #bloc_vignettes #vignette {
-    width: 45%;
+    width: 40%;
+    border-radius: 10px;
+  }
+  #restaurants #bloc_vignettes #vignette .img_vignette {
+    border-radius: 10px 10px 0 0;
+  }
+  #restaurants #bloc_vignettes #vignette .div_icone .icone_coeur {
+    font-size: 1.5em;
+  }
+  #restaurants #bloc_vignettes #vignette .div_icone i:hover {
+    color: #FF79DA;
   }
 }
 /**Responsive MOBILE **/
@@ -303,6 +322,7 @@ header .icone_retour a {
   border-radius: 25px 25px 0 0;
   position: relative;
   margin-top: -45px;
+  padding-bottom: 20px;
 }
 #section_main .icone_coeur {
   color: black;
@@ -361,12 +381,16 @@ header .icone_retour a {
   margin: auto auto 20px auto;
 }
 
+@media all and (min-width: 768px) and (max-width: 992px) {
+  #section_main #bloc_menu h2 {
+    width: 7%;
+  }
+}
 @media all and (min-width: 992px) {
   #section_main {
     width: 75%;
     margin: -45px auto auto auto;
     border-radius: 25px;
-    height: 660px;
   }
   #section_main .titre_main {
     justify-content: space-between;
@@ -374,6 +398,7 @@ header .icone_retour a {
   }
   #section_main .icone_coeur {
     margin-right: 60px;
+    font-size: 2em;
   }
   #section_main #bloc_menu {
     display: flex;
@@ -384,8 +409,6 @@ header .icone_retour a {
   #section_main #bloc_menu #menu_entrees,
 #section_main #bloc_menu #menu_plats,
 #section_main #bloc_menu #menu_desserts {
-    display: flex;
-    flex-direction: column;
     width: 30%;
   }
   #section_main #bloc_menu .menu {
@@ -417,6 +440,9 @@ footer #ul_footer a {
   color: white;
   font-size: 20px;
 }
+footer #ul_footer a:hover {
+  color: #FF79DA;
+}
 footer #ul_footer .icone_footer {
   padding-right: 10px;
   height: 15px;
@@ -437,6 +463,9 @@ footer #ul_footer .icone_footer {
     flex-direction: row;
     justify-content: space-around;
   }
+  footer #ul_footer a:hover {
+    color: #FF79DA;
+  }
 }
 @media all and (min-width: 992px) {
   footer {
@@ -451,6 +480,9 @@ footer #ul_footer .icone_footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+  footer #ul_footer a:hover {
+    color: #FF79DA;
   }
 }
 
