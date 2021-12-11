@@ -1,0 +1,79 @@
+// Animations PAGE PRINCIPALE  //
+
+header{
+	#bloc_explorer{
+		.bouton_explorer{
+			opacity: 1;
+			transition: opacity 1s;
+			
+			&:hover{
+				opacity: 0.7;
+			}
+		}
+	}
+}
+#restaurants{
+	#bloc_vignettes{
+		.icone_coeur:hover{
+			animation-name: key_coeur;
+			animation-duration: 1.5s;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: both;
+		}
+	}
+}
+
+#section_fonctionnement{
+	#bloc_choix{
+		#choix:hover{
+			animation-name: key_fonctions;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: both;
+		}
+	}
+}
+
+// Animations PAGES MENUS //
+
+#section_main{
+	.titre_main{
+		.icone_coeur:hover{
+			animation-name: key_coeur;
+			animation-duration: 1.5s;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: both;
+		}
+	}
+}
+	.bouton_commander{
+		opacity: 1;
+		transition: opacity 1s;
+		
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+
+// Keyframes //
+
+@keyframes key_coeur {
+	from{
+		color: $color-primary;
+		font-weight: bold;
+	}
+	to{
+		color: $color-secondary;
+		font-weight: bold;
+	}
+}
+
+@keyframes key_fonctions{
+	from{
+
+	}
+	to{
+		background-color: rgba($color: #9356DC, $alpha: 0.30);
+
+	}
+}

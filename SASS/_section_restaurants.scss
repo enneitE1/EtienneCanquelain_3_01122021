@@ -61,6 +61,7 @@
  }
  .icone_coeur{
 	 display: flex;
+	 font-size: 1.5em;
  }
 }
 // Responsive TABLETTE //
@@ -101,23 +102,13 @@
 			display: flex;
 			flex-wrap: wrap;
 			width: 100%;	
-		#vignette{
-			width: 40%;
-			border-radius: 10px;
-			.img_vignette{
-				border-radius: 10px 10px 0 0;
-			}
-			.div_icone{
-				.icone_coeur{
-					font-size: 1.5em;
-				}
-				i:hover{
-					color: $color-secondary;
-					
+			#vignette{
+				width: 40%;
+				border-radius: 10px;
+				.img_vignette{
+					border-radius: 10px 10px 0 0;
 				}
 			}
-		}
 		}
 	}
-
 }

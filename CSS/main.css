@@ -1,4 +1,56 @@
 /**Mixins **/
+header #bloc_explorer .bouton_explorer {
+  opacity: 1;
+  transition: opacity 1s;
+}
+header #bloc_explorer .bouton_explorer:hover {
+  opacity: 0.7;
+}
+
+#restaurants #bloc_vignettes .icone_coeur:hover {
+  animation-name: key_coeur;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+#section_fonctionnement #bloc_choix #choix:hover {
+  animation-name: key_fonctions;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+#section_main .titre_main .icone_coeur:hover {
+  animation-name: key_coeur;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.bouton_commander {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.bouton_commander:hover {
+  opacity: 0.7;
+}
+
+@keyframes key_coeur {
+  from {
+    color: #9356DC;
+    font-weight: bold;
+  }
+  to {
+    color: #FF79DA;
+    font-weight: bold;
+  }
+}
+@keyframes key_fonctions {
+  to {
+    background-color: rgba(147, 86, 220, 0.3);
+  }
+}
 body {
   margin: 0;
 }
@@ -263,6 +315,7 @@ header .icone_retour a {
 }
 #restaurants .icone_coeur {
   display: flex;
+  font-size: 1.5em;
 }
 
 @media all and (min-width: 768px) and (max-width: 992px) {
@@ -308,12 +361,6 @@ header .icone_retour a {
   }
   #restaurants #bloc_vignettes #vignette .img_vignette {
     border-radius: 10px 10px 0 0;
-  }
-  #restaurants #bloc_vignettes #vignette .div_icone .icone_coeur {
-    font-size: 1.5em;
-  }
-  #restaurants #bloc_vignettes #vignette .div_icone i:hover {
-    color: #FF79DA;
   }
 }
 /**Responsive MOBILE **/
