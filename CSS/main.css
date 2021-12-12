@@ -9,23 +9,23 @@ header #bloc_explorer .bouton_explorer:hover {
 
 #restaurants #bloc_vignettes .icone_coeur:hover {
   animation-name: key_coeur;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
+  animation: key_coeur 1s ease-in-out both;
 }
 
 #section_fonctionnement #bloc_choix #choix:hover {
-  animation-name: key_fonctions;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
+  background-color: rgba(147, 86, 220, 0.3);
+  transition: background-color 1.2s;
 }
 
 #section_main .titre_main .icone_coeur:hover {
   animation-name: key_coeur;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
+  animation: key_coeur 1s ease-in-out both;
+}
+#section_main #bloc_menu #menu_entrees .menu,
+#section_main #bloc_menu #menu_plats .menu,
+#section_main #bloc_menu #menu_desserts .menu {
+  animation-name: key_fadein;
+  animation: key_fadein 3s linear;
 }
 
 .bouton_commander {
@@ -49,6 +49,14 @@ header #bloc_explorer .bouton_explorer:hover {
 @keyframes key_fonctions {
   to {
     background-color: rgba(147, 86, 220, 0.3);
+  }
+}
+@keyframes key_fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 body {
@@ -373,7 +381,7 @@ header .icone_retour a {
 }
 #section_main .icone_coeur {
   color: black;
-  font-size: 1.25em;
+  font-size: 1.45em;
 }
 #section_main .titre_main {
   display: flex;
@@ -429,6 +437,9 @@ header .icone_retour a {
 }
 
 @media all and (min-width: 768px) and (max-width: 992px) {
+  #section_main .icone_coeur {
+    font-size: 2em;
+  }
   #section_main #bloc_menu h2 {
     width: 7%;
   }

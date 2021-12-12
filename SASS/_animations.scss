@@ -1,5 +1,7 @@
 // Animations PAGE PRINCIPALE  //
 
+// KeyFrames en bas du fichier //
+
 header{
 	#bloc_explorer{
 		.bouton_explorer{
@@ -16,9 +18,10 @@ header{
 	#bloc_vignettes{
 		.icone_coeur:hover{
 			animation-name: key_coeur;
-			animation-duration: 1.5s;
-			animation-timing-function: ease-in-out;
-			animation-fill-mode: both;
+			animation: key_coeur 1s ease-in-out both;
+		//	animation-duration: 1s;
+		//	animation-timing-function: ease-in-out;
+		//	animation-fill-mode: both;
 		}
 	}
 }
@@ -26,10 +29,8 @@ header{
 #section_fonctionnement{
 	#bloc_choix{
 		#choix:hover{
-			animation-name: key_fonctions;
-			animation-duration: 1s;
-			animation-timing-function: ease-in-out;
-			animation-fill-mode: both;
+			background-color: rgba($color: #9356DC, $alpha: 0.30);
+			transition: background-color 1.2s;
 		}
 	}
 }
@@ -40,9 +41,20 @@ header{
 	.titre_main{
 		.icone_coeur:hover{
 			animation-name: key_coeur;
-			animation-duration: 1.5s;
-			animation-timing-function: ease-in-out;
-			animation-fill-mode: both;
+			animation: key_coeur 1s ease-in-out both;
+	//		animation-duration: 1.2s;
+	//		animation-timing-function: ease-in-out;
+	//		animation-fill-mode: both;
+		}
+	}
+	#bloc_menu{
+		#menu_entrees,
+		#menu_plats,
+		#menu_desserts{
+			.menu{	
+				animation-name: key_fadein ;
+				animation: key_fadein 3s linear;
+			}
 		}
 	}
 }
@@ -54,6 +66,7 @@ header{
 			opacity: 0.7;
 		}
 	}
+
 
 // Keyframes //
 
@@ -75,5 +88,13 @@ header{
 	to{
 		background-color: rgba($color: #9356DC, $alpha: 0.30);
 
+	}
+}
+@keyframes key_fadein {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
 	}
 }

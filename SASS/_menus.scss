@@ -8,7 +8,7 @@
 	padding-bottom: 20px;
 	 .icone_coeur{
 		color: $color-black;
-		font-size: 1.25em;
+		font-size: 1.45em;
 	}
 .titre_main{
 	display: flex;
@@ -64,6 +64,9 @@
 // Responsive TABLETTE //
 @media all and (min-width: 768px) and (max-width: 992px){
 	#section_main{
+		.icone_coeur{
+			font-size: 2em;
+		}
 		#bloc_menu{
 			h2{
 				width: 7%;
