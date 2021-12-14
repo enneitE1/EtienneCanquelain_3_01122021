@@ -54,6 +54,9 @@ header{
 			.menu{	
 				animation-name: key_fadein ;
 				animation: key_fadein 3s linear;
+				&:hover{
+					transition-duration: 2s;
+				}
 			}
 		}
 	}
@@ -96,5 +99,33 @@ header{
 	}
 	to{
 		opacity: 1;
+	}
+}
+@keyframes key_check {
+	from{
+
+	}
+	to{
+		margin-right: 70px;
+	}
+}
+
+@keyframes key_loading {
+	from {
+		transform: rotate(0deg);
+	  }
+	to {
+		transform: rotate(360deg);
+	  }
+	}
+
+
+#bloc_chargement{
+	.icone_chargement:hover{
+		transform: rotate(-1turn);
+		transition: transform 2s ease-in-out;
+
+		animation-name: key_fadein ;
+		animation: key_fadein 5s linear;
 	}
 }

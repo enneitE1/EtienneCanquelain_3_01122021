@@ -1,10 +1,24 @@
 // Responsive MOBILE //
 body{
-	margin: 0;
-	h1{
-		font-family: $font-shrikhand;
+	#bloc_chargement{
+		display: none;
+		height: 150px;
+		width: 100%;
+		background-color: rgba(153, 226, 208, 0.2);
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 205px;	
+		.icone_chargement{
+			font-size: 2.5em;
+			color: $color-primary;
+		}
 	}
-	.bg_menu{
+	margin: 0;
+		h1{
+		font-family: $font-shrikhand;
+		}
+		.bg_menu{
 		width: 100%;
 		object-fit: cover;
 		max-height: 250px;

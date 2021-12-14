@@ -27,6 +27,11 @@ header #bloc_explorer .bouton_explorer:hover {
   animation-name: key_fadein;
   animation: key_fadein 3s linear;
 }
+#section_main #bloc_menu #menu_entrees .menu:hover,
+#section_main #bloc_menu #menu_plats .menu:hover,
+#section_main #bloc_menu #menu_desserts .menu:hover {
+  transition-duration: 2s;
+}
 
 .bouton_commander {
   opacity: 1;
@@ -59,8 +64,42 @@ header #bloc_explorer .bouton_explorer:hover {
     opacity: 1;
   }
 }
+@keyframes key_check {
+  to {
+    margin-right: 70px;
+  }
+}
+@keyframes key_loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#bloc_chargement .icone_chargement:hover {
+  transform: rotate(-1turn);
+  transition: transform 2s ease-in-out;
+  animation-name: key_fadein;
+  animation: key_fadein 5s linear;
+}
+
 body {
   margin: 0;
+}
+body #bloc_chargement {
+  display: none;
+  height: 150px;
+  width: 100%;
+  background-color: rgba(153, 226, 208, 0.2);
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 205px;
+}
+body #bloc_chargement .icone_chargement {
+  font-size: 2.5em;
+  color: #9356DC;
 }
 body h1 {
   font-family: "Shrikhand", sans-serif;
@@ -401,14 +440,30 @@ header .icone_retour a {
   margin-left: 20px;
 }
 #section_main .menu {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   background: white;
   border-radius: 15px;
   width: 90%;
-  height: 85px;
+  max-height: 85px;
   margin: auto auto 25px auto;
+  overflow: hidden;
+}
+#section_main .menu:hover .texte_menu {
+  width: 60%;
+}
+#section_main .menu:hover .texte_menu p, #section_main .menu:hover .texte_menu h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#section_main .menu:hover .prix {
+  width: 15%;
+}
+#section_main .menu:hover .anim_valider {
+  display: flex;
+  width: 25%;
 }
 #section_main .texte_menu {
   padding-left: 15px;
@@ -420,6 +475,18 @@ header .icone_retour a {
   display: flex;
   align-items: end;
   padding-right: 15px;
+}
+#section_main .anim_valider {
+  width: 20%;
+  background-color: #99E2D0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+}
+#section_main .anim_valider .icone_check {
+  color: white;
+  font-size: 1.7em;
 }
 #section_main .bouton_commander {
   display: flex;
