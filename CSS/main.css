@@ -1,4 +1,11 @@
 /**Mixins **/
+#bloc_chargement {
+  z-index: -1;
+  transform: rotate(-5turn);
+  transition: transform 4s ease-in-out;
+  animation: key_chargement 2.8s both;
+}
+
 header #bloc_explorer .bouton_explorer {
   opacity: 1;
   transition: opacity 1s;
@@ -21,23 +28,22 @@ header #bloc_explorer .bouton_explorer:hover {
   animation-name: key_coeur;
   animation: key_coeur 1s ease-in-out both;
 }
-#section_main #bloc_menu #menu_entrees .menu,
-#section_main #bloc_menu #menu_plats .menu,
-#section_main #bloc_menu #menu_desserts .menu {
-  animation-name: key_fadein;
-  animation: key_fadein 3s linear;
+#section_main #bloc_menu #menu_entrees .menu:hover .anim_valider,
+#section_main #bloc_menu #menu_plats .menu:hover .anim_valider,
+#section_main #bloc_menu #menu_desserts .menu:hover .anim_valider {
+  animation: key_check 2s both;
 }
-#section_main #bloc_menu #menu_entrees .menu:hover,
-#section_main #bloc_menu #menu_plats .menu:hover,
-#section_main #bloc_menu #menu_desserts .menu:hover {
-  transition-duration: 2s;
+#section_main #bloc_menu #menu_entrees .menu:hover .anim_valider .icone_check,
+#section_main #bloc_menu #menu_plats .menu:hover .anim_valider .icone_check,
+#section_main #bloc_menu #menu_desserts .menu:hover .anim_valider .icone_check {
+  animation-name: key_rotation;
+  animation: key_rotation 550ms linear;
 }
-
-.bouton_commander {
+#section_main .bouton_commander {
   opacity: 1;
   transition: opacity 1s;
 }
-.bouton_commander:hover {
+#section_main .bouton_commander:hover {
   opacity: 0.7;
 }
 
@@ -65,11 +71,16 @@ header #bloc_explorer .bouton_explorer:hover {
   }
 }
 @keyframes key_check {
+  from {
+    width: 0%;
+    display: none;
+  }
   to {
-    margin-right: 70px;
+    width: 25%;
+    display: flex;
   }
 }
-@keyframes key_loading {
+@keyframes key_rotation {
   from {
     transform: rotate(0deg);
   }
@@ -77,25 +88,44 @@ header #bloc_explorer .bouton_explorer:hover {
     transform: rotate(360deg);
   }
 }
-#bloc_chargement .icone_chargement:hover {
-  transform: rotate(-1turn);
-  transition: transform 2s ease-in-out;
-  animation-name: key_fadein;
-  animation: key_fadein 5s linear;
+@keyframes key_slide {
+  from {
+    left: 0;
+  }
+  to {
+    right: 0;
+  }
 }
-
+@keyframes key_chargement {
+  from {
+    visibility: visible;
+    z-index: 2;
+  }
+  99% {
+    z-index: 2;
+  }
+  to {
+    visibility: hidden;
+    z-index: -1;
+  }
+}
 body {
   margin: 0;
 }
 body #bloc_chargement {
-  display: none;
-  height: 150px;
+  position: fixed;
+  height: 100%;
   width: 100%;
-  background-color: rgba(153, 226, 208, 0.2);
-  align-items: center;
+}
+body #bloc_chargement .logo_chargement {
+  border: 3px solid #FF79DA;
+  border-radius: 20px;
+  width: 50%;
+  height: 15%;
+  display: flex;
   justify-content: center;
-  position: absolute;
-  top: 205px;
+  align-items: center;
+  margin: auto;
 }
 body #bloc_chargement .icone_chargement {
   font-size: 2.5em;
@@ -459,11 +489,10 @@ header .icone_retour a {
   text-overflow: ellipsis;
 }
 #section_main .menu:hover .prix {
-  width: 15%;
+  padding-right: 0;
 }
 #section_main .menu:hover .anim_valider {
   display: flex;
-  width: 25%;
 }
 #section_main .texte_menu {
   padding-left: 15px;

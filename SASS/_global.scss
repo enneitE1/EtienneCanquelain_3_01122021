@@ -1,14 +1,20 @@
 // Responsive MOBILE //
 body{
 	#bloc_chargement{
-		display: none;
-		height: 150px;
+	//	display: none;
+		position: fixed;
+		height: 100%;
 		width: 100%;
-		background-color: rgba(153, 226, 208, 0.2);
-		align-items: center;
-		justify-content: center;
-		position: absolute;
-		top: 205px;	
+		.logo_chargement{
+			border: 3px solid #FF79DA;
+			border-radius: 20px;
+			width: 50%;
+			height: 15%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+		}
 		.icone_chargement{
 			font-size: 2.5em;
 			color: $color-primary;

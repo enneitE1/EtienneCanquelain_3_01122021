@@ -2,6 +2,13 @@
 
 // KeyFrames en bas du fichier //
 
+#bloc_chargement{
+	z-index: -1;
+	transform: rotate(-5turn);
+	transition: transform 4s ease-in-out;
+	animation: key_chargement 2.8s both;
+}
+
 header{
 	#bloc_explorer{
 		.bouton_explorer{
@@ -51,16 +58,17 @@ header{
 		#menu_entrees,
 		#menu_plats,
 		#menu_desserts{
-			.menu{	
-				animation-name: key_fadein ;
-				animation: key_fadein 3s linear;
-				&:hover{
-					transition-duration: 2s;
+			.menu:hover{	
+				.anim_valider{
+					animation: key_check 2s both;
+				.icone_check{
+					animation-name: key_rotation;
+					animation: key_rotation 550ms linear;
+				}
 				}
 			}
 		}
 	}
-}
 	.bouton_commander{
 		opacity: 1;
 		transition: opacity 1s;
@@ -69,8 +77,7 @@ header{
 			opacity: 0.7;
 		}
 	}
-
-
+}
 // Keyframes //
 
 @keyframes key_coeur {
@@ -103,14 +110,16 @@ header{
 }
 @keyframes key_check {
 	from{
-
+		width: 0%;
+		display:none;
 	}
 	to{
-		margin-right: 70px;
+		width: 25%;
+		display: flex;
 	}
 }
 
-@keyframes key_loading {
+@keyframes key_rotation{
 	from {
 		transform: rotate(0deg);
 	  }
@@ -118,14 +127,24 @@ header{
 		transform: rotate(360deg);
 	  }
 	}
-
-
-#bloc_chargement{
-	.icone_chargement:hover{
-		transform: rotate(-1turn);
-		transition: transform 2s ease-in-out;
-
-		animation-name: key_fadein ;
-		animation: key_fadein 5s linear;
+@keyframes key_slide {
+	from{
+		left: 0;
+	}
+	to{
+		right: 0;
+	}
+}
+@keyframes key_chargement{
+	from{
+		visibility: visible;
+		z-index: 2;
+	}
+	99%{
+		z-index: 2;
+	}
+	to{
+		visibility: hidden;
+		z-index:-1;
 	}
 }
