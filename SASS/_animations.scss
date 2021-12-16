@@ -4,9 +4,13 @@
 
 #bloc_chargement{
 	z-index: -1;
-	transform: rotate(-5turn);
-	transition: transform 4s ease-in-out;
-	animation: key_chargement 2.8s both;
+	
+	
+	animation: key_chargement 3s both;
+	.icone_chargement{
+	 animation: key_multi_rota 3s  both;
+		
+	}
 }
 
 header{
@@ -44,6 +48,7 @@ header{
 
 // Animations PAGES MENUS //
 
+// Animation hover sur l'icone coeur //
 #section_main{
 	.titre_main{
 		.icone_coeur:hover{
@@ -54,16 +59,24 @@ header{
 	//		animation-fill-mode: both;
 		}
 	}
+
 	#bloc_menu{
 		#menu_entrees,
 		#menu_plats,
 		#menu_desserts{
+			.menu{
+				.anim_valider{
+					transition: key_check_retour 2s;
+				}
+			}
 			.menu:hover{	
 				.anim_valider{
 					animation: key_check 2s both;
+					transition-duration: 220ms;
+
 				.icone_check{
-					animation-name: key_rotation;
-					animation: key_rotation 550ms linear;
+					animation-name: key_rota ;
+					animation: key_rota 550ms linear;
 				}
 				}
 			}
@@ -72,7 +85,6 @@ header{
 	.bouton_commander{
 		opacity: 1;
 		transition: opacity 1s;
-		
 		&:hover{
 			opacity: 0.7;
 		}
@@ -111,18 +123,45 @@ header{
 @keyframes key_check {
 	from{
 		width: 0%;
-		display:none;
+		
 	}
 	to{
 		width: 25%;
-		display: flex;
+		
 	}
 }
-
-@keyframes key_rotation{
+@keyframes key_check_retour{
+	from{
+		width: 25%;
+	}
+	to{
+		width: 0%;
+	}
+}
+@keyframes key_rota{
 	from {
 		transform: rotate(0deg);
 	  }
+	to{
+		transform: rotate(360deg);
+	}
+}
+@keyframes key_multi_rota{
+	from {
+		transform: rotate(0deg);
+	  }
+	  20%{
+		  transform: rotate(360deg);
+	  }
+	  40%{
+		transform: rotate(0deg);
+	}
+	  60%{
+		transform: rotate(360deg);
+	}
+	80%{
+		transform: rotate(0deg);
+	}
 	to {
 		transform: rotate(360deg);
 	  }

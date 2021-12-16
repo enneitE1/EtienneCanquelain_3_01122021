@@ -1,9 +1,10 @@
 /**Mixins **/
 #bloc_chargement {
   z-index: -1;
-  transform: rotate(-5turn);
-  transition: transform 4s ease-in-out;
-  animation: key_chargement 2.8s both;
+  animation: key_chargement 3s both;
+}
+#bloc_chargement .icone_chargement {
+  animation: key_multi_rota 3s both;
 }
 
 header #bloc_explorer .bouton_explorer {
@@ -28,16 +29,22 @@ header #bloc_explorer .bouton_explorer:hover {
   animation-name: key_coeur;
   animation: key_coeur 1s ease-in-out both;
 }
+#section_main #bloc_menu #menu_entrees .menu .anim_valider,
+#section_main #bloc_menu #menu_plats .menu .anim_valider,
+#section_main #bloc_menu #menu_desserts .menu .anim_valider {
+  transition: key_check_retour 2s;
+}
 #section_main #bloc_menu #menu_entrees .menu:hover .anim_valider,
 #section_main #bloc_menu #menu_plats .menu:hover .anim_valider,
 #section_main #bloc_menu #menu_desserts .menu:hover .anim_valider {
   animation: key_check 2s both;
+  transition-duration: 220ms;
 }
 #section_main #bloc_menu #menu_entrees .menu:hover .anim_valider .icone_check,
 #section_main #bloc_menu #menu_plats .menu:hover .anim_valider .icone_check,
 #section_main #bloc_menu #menu_desserts .menu:hover .anim_valider .icone_check {
-  animation-name: key_rotation;
-  animation: key_rotation 550ms linear;
+  animation-name: key_rota;
+  animation: key_rota 550ms linear;
 }
 #section_main .bouton_commander {
   opacity: 1;
@@ -73,15 +80,41 @@ header #bloc_explorer .bouton_explorer:hover {
 @keyframes key_check {
   from {
     width: 0%;
-    display: none;
   }
   to {
     width: 25%;
-    display: flex;
   }
 }
-@keyframes key_rotation {
+@keyframes key_check_retour {
   from {
+    width: 25%;
+  }
+  to {
+    width: 0%;
+  }
+}
+@keyframes key_rota {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes key_multi_rota {
+  from {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(360deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(360deg);
+  }
+  80% {
     transform: rotate(0deg);
   }
   to {
@@ -116,20 +149,31 @@ body #bloc_chargement {
   position: fixed;
   height: 100%;
   width: 100%;
+  top: 40%;
 }
 body #bloc_chargement .logo_chargement {
   border: 3px solid #FF79DA;
   border-radius: 20px;
+  box-shadow: 7px 9px 20px black;
   width: 50%;
-  height: 15%;
+  height: 25%;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   margin: auto;
+  background-color: rgba(147, 86, 220, 0.9);
+}
+body #bloc_chargement h2 {
+  font-size: 1.8em;
+  font-family: "Shrikhand", sans-serif;
+  color: #99E2D0;
+  text-shadow: 0px 6px 0px black;
 }
 body #bloc_chargement .icone_chargement {
   font-size: 2.5em;
-  color: #9356DC;
+  color: #FF79DA;
+  text-shadow: 0px 6px 0px black;
 }
 body h1 {
   font-family: "Shrikhand", sans-serif;
