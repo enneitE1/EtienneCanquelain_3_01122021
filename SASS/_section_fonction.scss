@@ -3,7 +3,7 @@
 	 h2{
 		margin-left: 20px;
 	}
-	#choix{
+	.choix{
 		@include flex_space;
 		background-color: $bg-gris;
 		border-radius: 25px;
@@ -40,7 +40,7 @@
 			margin-left: 0;
 		}
 	
-	#choix{
+	.choix{
 		justify-content: flex-start;
 		width: 50%;
 	p{
@@ -64,7 +64,7 @@
 	}
 	#bloc_choix{
 		display: flex;
-		#choix{
+		.choix{
 			width: 30%;
 			display: flex;
 			flex-direction: row;

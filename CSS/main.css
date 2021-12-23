@@ -16,35 +16,44 @@ header #bloc_explorer .bouton_explorer:hover {
 }
 
 #restaurants #bloc_vignettes .icone_coeur:hover {
-  animation-name: key_coeur;
   animation: key_coeur 1s ease-in-out both;
 }
 
-#section_fonctionnement #bloc_choix #choix:hover {
-  background-color: rgba(147, 86, 220, 0.3);
+#section_fonctionnement #bloc_choix .choix {
+  background-color: white;
   transition: background-color 1.2s;
+}
+#section_fonctionnement #bloc_choix .choix:hover {
+  background-color: rgba(147, 86, 220, 0.3);
 }
 
 #section_main .titre_main .icone_coeur:hover {
-  animation-name: key_coeur;
   animation: key_coeur 1s ease-in-out both;
+}
+#section_main #bloc_menu {
+  animation: key_fadein 3s linear;
+}
+#section_main #bloc_menu #menu_entrees .menu .icone_check,
+#section_main #bloc_menu #menu_plats .menu .icone_check,
+#section_main #bloc_menu #menu_desserts .menu .icone_check {
+  transition: 0.55s;
 }
 #section_main #bloc_menu #menu_entrees .menu .anim_valider,
 #section_main #bloc_menu #menu_plats .menu .anim_valider,
 #section_main #bloc_menu #menu_desserts .menu .anim_valider {
-  transition: key_check_retour 2s;
+  width: 0%;
+  transition: all 1.5s;
+  overflow: hidden;
 }
 #section_main #bloc_menu #menu_entrees .menu:hover .anim_valider,
 #section_main #bloc_menu #menu_plats .menu:hover .anim_valider,
 #section_main #bloc_menu #menu_desserts .menu:hover .anim_valider {
-  animation: key_check 2s both;
-  transition-duration: 220ms;
+  width: 30%;
 }
 #section_main #bloc_menu #menu_entrees .menu:hover .anim_valider .icone_check,
 #section_main #bloc_menu #menu_plats .menu:hover .anim_valider .icone_check,
 #section_main #bloc_menu #menu_desserts .menu:hover .anim_valider .icone_check {
-  animation-name: key_rota;
-  animation: key_rota 550ms linear;
+  transform: rotate(360deg);
 }
 #section_main .bouton_commander {
   opacity: 1;
@@ -54,6 +63,18 @@ header #bloc_explorer .bouton_explorer:hover {
   opacity: 0.7;
 }
 
+@media all and (min-width: 768px) and (max-width: 992px) {
+  #section_main #bloc_menu #menu_entrees .menu:hover .texte_menu,
+#section_main #bloc_menu #menu_plats .menu:hover .texte_menu,
+#section_main #bloc_menu #menu_desserts .menu:hover .texte_menu {
+    width: 80%;
+  }
+  #section_main #bloc_menu #menu_entrees .menu:hover .anim_valider,
+#section_main #bloc_menu #menu_plats .menu:hover .anim_valider,
+#section_main #bloc_menu #menu_desserts .menu:hover .anim_valider {
+    width: 15%;
+  }
+}
 @keyframes key_coeur {
   from {
     color: #9356DC;
@@ -62,11 +83,6 @@ header #bloc_explorer .bouton_explorer:hover {
   to {
     color: #FF79DA;
     font-weight: bold;
-  }
-}
-@keyframes key_fonctions {
-  to {
-    background-color: rgba(147, 86, 220, 0.3);
   }
 }
 @keyframes key_fadein {
@@ -85,14 +101,6 @@ header #bloc_explorer .bouton_explorer:hover {
     width: 25%;
   }
 }
-@keyframes key_check_retour {
-  from {
-    width: 25%;
-  }
-  to {
-    width: 0%;
-  }
-}
 @keyframes key_rota {
   from {
     transform: rotate(0deg);
@@ -105,28 +113,8 @@ header #bloc_explorer .bouton_explorer:hover {
   from {
     transform: rotate(0deg);
   }
-  20% {
-    transform: rotate(360deg);
-  }
-  40% {
-    transform: rotate(0deg);
-  }
-  60% {
-    transform: rotate(360deg);
-  }
-  80% {
-    transform: rotate(0deg);
-  }
   to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes key_slide {
-  from {
-    left: 0;
-  }
-  to {
-    right: 0;
+    transform: rotate(1800deg);
   }
 }
 @keyframes key_chargement {
@@ -146,12 +134,23 @@ body {
   margin: 0;
 }
 body #bloc_chargement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  top: 40%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.8;
+  content: "";
 }
 body #bloc_chargement .logo_chargement {
+  z-index: 3;
   border: 3px solid #FF79DA;
   border-radius: 20px;
   box-shadow: 7px 9px 20px black;
@@ -167,12 +166,12 @@ body #bloc_chargement .logo_chargement {
 body #bloc_chargement h2 {
   font-size: 1.8em;
   font-family: "Shrikhand", sans-serif;
-  color: #99E2D0;
+  color: #99e2d0;
   text-shadow: 0px 6px 0px black;
 }
 body #bloc_chargement .icone_chargement {
   font-size: 2.5em;
-  color: #FF79DA;
+  color: #99e2d0;
   text-shadow: 0px 6px 0px black;
 }
 body h1 {
@@ -184,7 +183,23 @@ body .bg_menu {
   max-height: 250px;
 }
 
+@media all and (min-width: 768px) and (max-width: 992px) {
+  #bloc_chargement {
+    position: fixed;
+  }
+  #bloc_chargement .logo_chargement {
+    width: 25% !important;
+    height: 15% !important;
+  }
+}
 @media all and (min-width: 992px) {
+  body #bloc_chargement {
+    position: fixed;
+  }
+  body #bloc_chargement .logo_chargement {
+    width: 10%;
+    height: 20%;
+  }
   body .bg_menu {
     max-height: 620px;
   }
@@ -299,7 +314,7 @@ header .icone_retour a {
 #section_fonctionnement h2 {
   margin-left: 20px;
 }
-#section_fonctionnement #choix {
+#section_fonctionnement .choix {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -310,7 +325,7 @@ header .icone_retour a {
   margin: auto auto 20px auto;
   box-shadow: 0px 5px 20px #999;
 }
-#section_fonctionnement #choix p {
+#section_fonctionnement .choix p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -321,11 +336,11 @@ header .icone_retour a {
   border-radius: 25px;
   margin-left: -20px;
 }
-#section_fonctionnement #choix h3 {
+#section_fonctionnement .choix h3 {
   margin-right: 40px;
   opacity: 0.6;
 }
-#section_fonctionnement #choix .icone_choix {
+#section_fonctionnement .choix .icone_choix {
   color: gray;
 }
 
@@ -335,14 +350,14 @@ header .icone_retour a {
     justify-content: center;
     margin-left: 0;
   }
-  #section_fonctionnement #choix {
+  #section_fonctionnement .choix {
     justify-content: flex-start;
     width: 50%;
   }
-  #section_fonctionnement #choix p {
+  #section_fonctionnement .choix p {
     margin: 0 20px 0 -7px;
   }
-  #section_fonctionnement #choix .icone_choix {
+  #section_fonctionnement .choix .icone_choix {
     margin-right: 20px;
   }
 }
@@ -357,19 +372,19 @@ header .icone_retour a {
   #bloc_choix {
     display: flex;
   }
-  #bloc_choix #choix {
+  #bloc_choix .choix {
     width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
   }
-  #bloc_choix #choix p {
+  #bloc_choix .choix p {
     margin-left: -10px;
   }
-  #bloc_choix #choix .icone_choix {
+  #bloc_choix .choix .icone_choix {
     margin-left: 20px;
   }
-  #bloc_choix #choix h3 {
+  #bloc_choix .choix h3 {
     margin-left: 20px;
   }
 }
@@ -418,7 +433,7 @@ header .icone_retour a {
   object-fit: cover;
 }
 #restaurants .texte_nouveau {
-  background: #99E2D0;
+  background: #99e2d0;
   color: green;
   position: absolute;
   right: 10px;
@@ -533,13 +548,14 @@ header .icone_retour a {
   text-overflow: ellipsis;
 }
 #section_main .menu:hover .prix {
-  padding-right: 0;
+  padding-right: 5px;
 }
 #section_main .menu:hover .anim_valider {
   display: flex;
 }
 #section_main .texte_menu {
   padding-left: 15px;
+  flex: 100%;
 }
 #section_main .texte_menu h3 {
   margin-bottom: 0px;
@@ -552,7 +568,7 @@ header .icone_retour a {
 #section_main .anim_valider {
   width: 20%;
   background-color: #99E2D0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0 10px 10px 0;

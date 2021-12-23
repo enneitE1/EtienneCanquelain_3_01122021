@@ -4,12 +4,9 @@
 
 #bloc_chargement{
 	z-index: -1;
-	
-	
 	animation: key_chargement 3s both;
 	.icone_chargement{
 	 animation: key_multi_rota 3s  both;
-		
 	}
 }
 
@@ -28,20 +25,20 @@ header{
 #restaurants{
 	#bloc_vignettes{
 		.icone_coeur:hover{
-			animation-name: key_coeur;
 			animation: key_coeur 1s ease-in-out both;
-		//	animation-duration: 1s;
-		//	animation-timing-function: ease-in-out;
-		//	animation-fill-mode: both;
 		}
 	}
 }
 
 #section_fonctionnement{
 	#bloc_choix{
-		#choix:hover{
-			background-color: rgba($color: #9356DC, $alpha: 0.30);
+		.choix{
+			background-color: white;
 			transition: background-color 1.2s;
+		}
+		.choix:hover{
+			background-color: rgba($color: #9356DC, $alpha: 0.30);
+			
 		}
 	}
 }
@@ -52,8 +49,8 @@ header{
 #section_main{
 	.titre_main{
 		.icone_coeur:hover{
-			animation-name: key_coeur;
 			animation: key_coeur 1s ease-in-out both;
+	//		animation-name: key_coeur;
 	//		animation-duration: 1.2s;
 	//		animation-timing-function: ease-in-out;
 	//		animation-fill-mode: both;
@@ -61,23 +58,27 @@ header{
 	}
 
 	#bloc_menu{
+		animation: key_fadein 3s linear;
 		#menu_entrees,
 		#menu_plats,
 		#menu_desserts{
 			.menu{
+				.icone_check{
+					transition: 0.550s;
+				}
 				.anim_valider{
-					transition: key_check_retour 2s;
+				width: 0%;
+			    transition: all 1.5s;
+				overflow: hidden;
 				}
 			}
-			.menu:hover{	
+			.menu:hover{
 				.anim_valider{
-					animation: key_check 2s both;
-					transition-duration: 220ms;
+					width: 30%;
 
-				.icone_check{
-					animation-name: key_rota ;
-					animation: key_rota 550ms linear;
-				}
+					.icone_check{
+						transform: rotate(360deg);
+					}
 				}
 			}
 		}
@@ -89,6 +90,25 @@ header{
 			opacity: 0.7;
 		}
 	}
+}
+// Animations pages menus TABLETTE //
+@media all and (min-width: 768px) and (max-width: 992px){
+	#section_main{
+		#bloc_menu{
+			#menu_entrees,
+			#menu_plats,
+			#menu_desserts{
+			.menu:hover{
+				.texte_menu{
+					width: 80%;
+				}
+				.anim_valider{
+					width: 15%;
+				}
+			}
+			}
+		}
+	} 
 }
 // Keyframes //
 
@@ -103,15 +123,6 @@ header{
 	}
 }
 
-@keyframes key_fonctions{
-	from{
-
-	}
-	to{
-		background-color: rgba($color: #9356DC, $alpha: 0.30);
-
-	}
-}
 @keyframes key_fadein {
 	from{
 		opacity: 0;
@@ -130,14 +141,7 @@ header{
 		
 	}
 }
-@keyframes key_check_retour{
-	from{
-		width: 25%;
-	}
-	to{
-		width: 0%;
-	}
-}
+
 @keyframes key_rota{
 	from {
 		transform: rotate(0deg);
@@ -149,31 +153,12 @@ header{
 @keyframes key_multi_rota{
 	from {
 		transform: rotate(0deg);
-	  }
-	  20%{
-		  transform: rotate(360deg);
-	  }
-	  40%{
-		transform: rotate(0deg);
-	}
-	  60%{
-		transform: rotate(360deg);
-	}
-	80%{
-		transform: rotate(0deg);
 	}
 	to {
-		transform: rotate(360deg);
+		transform: rotate(1800deg);
 	  }
 	}
-@keyframes key_slide {
-	from{
-		left: 0;
-	}
-	to{
-		right: 0;
-	}
-}
+
 @keyframes key_chargement{
 	from{
 		visibility: visible;
