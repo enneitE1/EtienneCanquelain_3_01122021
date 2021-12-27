@@ -17,8 +17,8 @@
 		justify-content: space-around;
 		font-family: $font-shrikhand;
 	}
-#bloc_menu{
-	@include flex_column;
+	#bloc_menu{
+		@include flex_column;
 	 	h2{
 			border-bottom: 3px #99E2D0 solid;
 			width: 15%;
@@ -36,30 +36,18 @@
 	max-height: 85px;
 	margin:  auto auto 25px auto;
 	overflow: hidden;
-		&:hover{
-			.texte_menu{
-				width: 60%;
-				p, h3{
-					overflow: hidden;
-					white-space: nowrap;
-					text-overflow: ellipsis;
-				} 
-			}
-			.prix{
-			//	width: 15%;
-			padding-right: 5px;
-			}
-			.anim_valider{
-				display: flex;
-				
-			}
+		p, h3{
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 		}
-	}
-	.texte_menu{
-	padding-left: 15px;
-	flex: 100%;
-		 h3{
-		margin-bottom: 0px;
+		.texte_menu{
+			width: 60%;
+			padding-left: 15px;
+			flex: 100%;
+			 h3{
+				margin-bottom: 0px;
+			}
 		}
 	}
 	.prix{
@@ -68,28 +56,28 @@
 	padding-right: 15px;
 	}
 	.anim_valider{
-	width: 20% ;
-	background-color: #99E2D0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 0 10px 10px 0;
+		width: 20% ;
+		background-color: #99E2D0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0 10px 10px 0;
 		.icone_check{
 			color: white;
 			font-size: 1.7em;
 		}
 	}
 	.bouton_commander{
-	@include flex_items;
-	background: $bg-degrade;
-	color: $color-white;
-	height: 50px;
-	width: 190px;
-	border: none;
-	border-radius: 25px;
-	font-weight: bold;
-	cursor: pointer;
-	margin: auto auto 20px auto;
+		@include flex_items;
+		background: $bg-degrade;
+		color: $color-white;
+		height: 50px;
+		width: 190px;
+		border: none;
+		border-radius: 25px;
+		font-weight: bold;
+		cursor: pointer;
+		margin: auto auto 20px auto;
 	}
 }
 

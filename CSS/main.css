@@ -36,13 +36,13 @@ header #bloc_explorer .bouton_explorer:hover {
 #section_main #bloc_menu #menu_entrees .menu .icone_check,
 #section_main #bloc_menu #menu_plats .menu .icone_check,
 #section_main #bloc_menu #menu_desserts .menu .icone_check {
-  transition: 0.55s;
+  transition: transform 0.55s;
 }
 #section_main #bloc_menu #menu_entrees .menu .anim_valider,
 #section_main #bloc_menu #menu_plats .menu .anim_valider,
 #section_main #bloc_menu #menu_desserts .menu .anim_valider {
   width: 0%;
-  transition: all 1.5s;
+  transition: width 1.5s;
   overflow: hidden;
 }
 #section_main #bloc_menu #menu_entrees .menu:hover .anim_valider,
@@ -133,6 +133,14 @@ header #bloc_explorer .bouton_explorer:hover {
 body {
   margin: 0;
 }
+body h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+body .bg_menu {
+  width: 100%;
+  object-fit: cover;
+  max-height: 250px;
+}
 body #bloc_chargement {
   display: flex;
   align-items: center;
@@ -173,14 +181,6 @@ body #bloc_chargement .icone_chargement {
   font-size: 2.5em;
   color: #99e2d0;
   text-shadow: 0px 6px 0px black;
-}
-body h1 {
-  font-family: "Shrikhand", sans-serif;
-}
-body .bg_menu {
-  width: 100%;
-  object-fit: cover;
-  max-height: 250px;
 }
 
 @media all and (min-width: 768px) and (max-width: 992px) {
@@ -397,7 +397,7 @@ header .icone_retour a {
   margin-left: 20px;
   padding: 45px 0 10px 25px;
 }
-#restaurants #vignette {
+#restaurants .vignette {
   width: 90%;
   height: 232px;
   background: white;
@@ -405,24 +405,22 @@ header .icone_retour a {
   box-shadow: 0px 5px 20px #999;
   margin: auto auto 20px auto;
 }
-#restaurants #vignette a {
+#restaurants .vignette a {
   text-decoration: none;
+  color: black;
 }
-#restaurants #txt_icone_vignette {
+#restaurants .txt_icone_vignette {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-#restaurants #txt_icone_vignette h3 {
+#restaurants .txt_icone_vignette h3 {
   margin: 10px 0px 0px 15px;
 }
-#restaurants #txt_icone_vignette p {
+#restaurants .txt_icone_vignette p {
   margin: 5px 0px 0px 15px;
 }
-#restaurants #txt_icone_vignette a {
-  color: black;
-}
-#restaurants #div_img_vignette {
+#restaurants .div_img_vignette {
   height: 160px;
   position: relative;
 }
@@ -472,7 +470,7 @@ header .icone_retour a {
     flex-wrap: wrap;
     width: 100%;
   }
-  #restaurants #bloc_vignettes #vignette {
+  #restaurants #bloc_vignettes .vignette {
     width: 45%;
   }
 }
@@ -491,11 +489,11 @@ header .icone_retour a {
     flex-wrap: wrap;
     width: 100%;
   }
-  #restaurants #bloc_vignettes #vignette {
+  #restaurants #bloc_vignettes .vignette {
     width: 40%;
     border-radius: 10px;
   }
-  #restaurants #bloc_vignettes #vignette .img_vignette {
+  #restaurants #bloc_vignettes .vignette .img_vignette {
     border-radius: 10px 10px 0 0;
   }
 }
@@ -539,25 +537,17 @@ header .icone_retour a {
   margin: auto auto 25px auto;
   overflow: hidden;
 }
-#section_main .menu:hover .texte_menu {
-  width: 60%;
-}
-#section_main .menu:hover .texte_menu p, #section_main .menu:hover .texte_menu h3 {
+#section_main .menu p, #section_main .menu h3 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#section_main .menu:hover .prix {
-  padding-right: 5px;
-}
-#section_main .menu:hover .anim_valider {
-  display: flex;
-}
-#section_main .texte_menu {
+#section_main .menu .texte_menu {
+  width: 60%;
   padding-left: 15px;
   flex: 100%;
 }
-#section_main .texte_menu h3 {
+#section_main .menu .texte_menu h3 {
   margin-bottom: 0px;
 }
 #section_main .prix {

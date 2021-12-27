@@ -6,7 +6,7 @@
 	z-index: -1;
 	animation: key_chargement 3s both;
 	.icone_chargement{
-	 animation: key_multi_rota 3s  both;
+		animation: key_multi_rota 3s  both;
 	}
 }
 
@@ -15,7 +15,7 @@ header{
 		.bouton_explorer{
 			opacity: 1;
 			transition: opacity 1s;
-			
+
 			&:hover{
 				opacity: 0.7;
 			}
@@ -64,12 +64,12 @@ header{
 		#menu_desserts{
 			.menu{
 				.icone_check{
-					transition: 0.550s;
+					transition: transform 0.550s;
 				}
 				.anim_valider{
-				width: 0%;
-			    transition: all 1.5s;
-				overflow: hidden;
+					width: 0%;
+					transition: width 1.5s;
+					overflow: hidden;
 				}
 			}
 			.menu:hover{
@@ -98,17 +98,17 @@ header{
 			#menu_entrees,
 			#menu_plats,
 			#menu_desserts{
-			.menu:hover{
-				.texte_menu{
-					width: 80%;
+				.menu:hover{
+					.texte_menu{
+						width: 80%;
+					}
+						.anim_valider{
+							width: 15%;
+						}
 				}
-				.anim_valider{
-					width: 15%;
-				}
-			}
 			}
 		}
-	} 
+	}
 }
 // Keyframes //
 

@@ -90,19 +90,18 @@ header{
 	}
 }
 }
-
 // Responsive DESKTOP des autres pages //
 @media all and (min-width: 992px){
-header{
-	#block_header{
-		h1{
+	header{
+		#block_header{
 			font-size: 2em;
-		}
-		font-size: 2em;
-		margin: auto;
+			margin: auto;
+			h1{
+				font-size: 2em;
+			}
 			.icone_retour{
 				top: 74px;
 			}
-	}	
-} 
-} 
+		}
+	}
+}
