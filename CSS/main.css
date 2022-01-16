@@ -51,6 +51,11 @@ header #bloc_explorer .bouton_explorer:hover {
 #section_main #bloc_menu #menu_desserts .menu:nth-child(4) {
   animation-delay: 2s;
 }
+#section_main #bloc_menu #menu_entrees .menu:nth-child(5),
+#section_main #bloc_menu #menu_plats .menu:nth-child(5),
+#section_main #bloc_menu #menu_desserts .menu:nth-child(5) {
+  animation-delay: 3s;
+}
 #section_main #bloc_menu #menu_entrees .menu .icone_check,
 #section_main #bloc_menu #menu_plats .menu .icone_check,
 #section_main #bloc_menu #menu_desserts .menu .icone_check {
